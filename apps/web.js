@@ -1,6 +1,6 @@
-import getApp from "../helpers/getApp.js"
+const getApp = require("../helpers/getApp.js");
 
-export default (url) => {
+module.exports = (url) => {
   let appDetails = getApp(url);
   return {
     appName: appDetails.name,

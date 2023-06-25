@@ -1,11 +1,13 @@
-import youtube from "./youtube.js";
-import instagram from "./instagram.js";
-import spotify from "./spotify.js";
-import twitter from "./twitter.js";
+const youtube = require("./youtube.js");
+const instagram = require("./instagram.js");
+const spotify = require("./spotify.js");
+const twitter = require("./twitter.js");
+const snapchat = require("./snapchat.js");
 
-export default {
+module.exports = {
   youtube,
   instagram,
   spotify,
-  twitter
+  twitter,
+  snapchat
 };

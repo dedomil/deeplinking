@@ -1,5 +1,5 @@
-import apps from "../apps/index.js";
-import getApp from "../helpers/getApp.js";
+const apps = require("./apps/index.js");
+const getApp = require("./helpers/getApp.js");
 
 const deeplink = (url) => {
   const { name: app } = getApp(url);
@@ -8,4 +8,4 @@ const deeplink = (url) => {
   }
 }
 
-export default { deeplink, getApp }
+module.exports = { deeplink, getApp }

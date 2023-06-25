@@ -1,4 +1,4 @@
-export default (url) => {
+module.exports = (url) => {
   let { hostname } = new URL(url);
   /** youtube */
   if (hostname.includes("youtube.com") || hostname.includes("youtu.be")) {
@@ -40,6 +40,17 @@ export default (url) => {
       packages: {
         android: "com.spotify.music",
         ios: "spotify"
+      },
+      url
+    }
+  }
+  /** snapchat */
+  if (hostname.includes("snapchat.com")) {
+    return {
+      name: "snapchat",
+      packages: {
+        android: "com.snapchat.android",
+        ios: "snapchat"
       },
       url
     }

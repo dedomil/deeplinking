@@ -1,9 +1,9 @@
-import getApp from "../helpers/getApp.js"
+const getApp = require("../helpers/getApp.js");
 
-export default (url) => {
+module.exports = (url) => {
   let appDetails = getApp(url);
   let { pathname, searchParams } = new URL(appDetails.url);
-  let intent_url_android = (appDetails.url.split("//")[1]).endsWith("/") ? (appDetails.url.split("//")[1]) : `${(appDetails.url.split("//")[1])}/`;
+  let intent_url_android = (appDetails.url.split("//")[1]);
   let intent_url_ios = "timeline"; // if nothing matches show the timeline
   console.log(pathname);
   if (pathname.includes("/status/")) {
