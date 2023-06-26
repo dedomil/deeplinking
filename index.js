@@ -1,5 +1,6 @@
 const apps = require("./apps/index.js");
 const getApp = require("./helpers/getApp.js");
+const getOs = require("./helpers/getOs.js");
 
 const deeplink = (url) => {
   const { name: app } = getApp(url);
@@ -8,4 +9,4 @@ const deeplink = (url) => {
   }
 }
 
-module.exports = { deeplink, getApp }
+module.exports = { deeplink, getApp, getOs }

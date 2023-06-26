@@ -2,7 +2,7 @@ const getApp = require("../helpers/getApp.js");
 
 module.exports = (url) => {
   let appDetails = getApp(url);
-  let intent_url = (appDetails.url.split("//")[1]).endsWith("/") ? (appDetails.url.split("//")[1]) : `${(appDetails.url.split("//")[1])}/`;
+  let intent_url = appDetails.url.split("//")[1];
   return {
     appName: appDetails.name,
     intents: {
