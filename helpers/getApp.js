@@ -55,6 +55,17 @@ module.exports = (url) => {
       url
     }
   }
+  /** telegram */
+  if (hostname.includes("t.me") || hostname.includes("telegram.me") || hostname.includes("telegram.dog")) {
+    return {
+      name: "telegram",
+      packages: {
+        android: "org.telegram.messenger",
+        ios: "tg"
+      },
+      url: url.replace("telegram.me", "t.me").replace("telegram.dog", "t.me")
+    }
+  }
   return {
     name: "web",
     packages: {
