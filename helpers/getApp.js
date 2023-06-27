@@ -8,7 +8,7 @@ module.exports = (url) => {
         android: "com.google.android.youtube",
         ios: "vnd.youtube"
       },
-      url: url.replace("m.youtube.com", "youtube.com").replace("youtu.be", "youtube.com")
+      url: url.replace("m.youtube.com", "youtube.com").replace("youtu.be/", "youtube.com/watch?v=")
     }
   }
   /** instagram */
