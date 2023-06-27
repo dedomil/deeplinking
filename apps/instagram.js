@@ -2,7 +2,8 @@ const getApp = require("../helpers/getApp.js");
 
 module.exports = (url) => {
   let appDetails = getApp(url);
-  let intent_url = appDetails.url.split("//")[1];
+  let urlWithoutHttp = appDetails.url.split("//")[1];
+  let intent_url = urlWithoutHttp.endsWith("/") ? urlWithoutHttp.slice(0, -1) : urlWithoutHttp;
   return {
     appName: appDetails.name,
     intents: {

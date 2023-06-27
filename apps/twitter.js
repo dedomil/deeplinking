@@ -3,7 +3,8 @@ const getApp = require("../helpers/getApp.js");
 module.exports = (url) => {
   let appDetails = getApp(url);
   let { pathname, searchParams } = new URL(appDetails.url);
-  let intent_url_android = appDetails.url.split("//")[1];
+  let urlWithoutHttp = appDetails.url.split("//")[1];
+  let intent_url_android = urlWithoutHttp.endsWith("/") ? urlWithoutHttp.slice(0, -1) : urlWithoutHttp;
   let intent_url_ios = "timeline"; // if nothing matches show the timeline
   console.log(pathname);
   if (pathname.includes("/status/")) {

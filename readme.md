@@ -10,8 +10,8 @@ const { deeplink } = require("appopener");
 let { appName, intents } = deeplink("https://twitter.com/aadixl");
 ```
 ## supported apps
-- ### youtube
-- ### instagram
-- ### snapchat
-- ### twitter
-- ### spotify
+- #### youtube
+- #### instagram
+- #### snapchat
+- #### twitter
+- #### spotify
