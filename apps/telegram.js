@@ -13,10 +13,14 @@ module.exports = (url) => {
     query = "addstickers";
     option = "set";
     value = params[1] || "";
+  } else if (params[0] == "addemoji") {
+    query = "addemoji";
+    option = "set";
+    value = params[1] || "";
   } else {
     query = "resolve";
     option = "domain";
-    value = params[1] || "";
+    value = params[0] || "";
   }
   return {
     appName: appDetails.name,
