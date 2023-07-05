@@ -1,7 +1,8 @@
-const { parse } = require("useragent");
-
 module.exports = (useragent) => {
-  let os = parse(useragent).os.family.toLowerCase();
-  (os == "android") ? os = "android" : (os == "iphone" || os == "ipod" || os == "ipad" || os == "ios") ? os = "ios" : os = "web";
-  return os;
+  if (/android/i.test(useragent)) {
+    return "android";
+  } else if (/iPad|iPhone|iPod/.test(useragent)) {
+    return "ios";
+  }
+  return "web";
 }
