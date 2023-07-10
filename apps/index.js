@@ -4,6 +4,7 @@ const spotify = require("./spotify.js");
 const twitter = require("./twitter.js");
 const snapchat = require("./snapchat.js");
 const telegram = require("./telegram.js");
+const whatsapp = require("./whatsapp.js");
 
 module.exports = {
   youtube,
@@ -11,5 +12,6 @@ module.exports = {
   spotify,
   twitter,
   snapchat,
-  telegram
+  telegram,
+  whatsapp
 };

@@ -66,6 +66,18 @@ module.exports = (url) => {
       url: url.replace("telegram.me", "t.me").replace("telegram.dog", "t.me")
     }
   }
+  /** whatsapp */
+  // TODO: wa.me links
+  if (hostname.includes("whatsapp.com")) {
+    return {
+      name: "whatsapp",
+      packages: {
+        android: "com.whatsapp",
+        ios: "whatsapp"
+      },
+      url
+    }
+  }
   return {
     name: "web",
     packages: {
