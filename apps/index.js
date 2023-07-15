@@ -5,8 +5,10 @@ const twitter = require("./twitter.js");
 const snapchat = require("./snapchat.js");
 const telegram = require("./telegram.js");
 const whatsapp = require("./whatsapp.js");
+const web = require("./web.js");
 
 module.exports = {
+  web,
   youtube,
   instagram,
   spotify,

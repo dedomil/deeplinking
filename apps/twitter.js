@@ -1,6 +1,6 @@
 const getApp = require("../helpers/getApp.js");
 
-module.exports = (url) => {
+module.exports = (url, { fallbackUrl }) => {
   let appDetails = getApp(url);
   let { pathname, searchParams } = new URL(appDetails.url);
   let urlWithoutHttp = appDetails.url.split("//")[1];
@@ -17,7 +17,7 @@ module.exports = (url) => {
   return {
     appName: appDetails.name,
     intents: {
-      android: `intent://${intent_url_android}#Intent;S.browser_fallback_url=${url};package=${appDetails.packages.android};scheme=https;end`,
+      android: `intent://${intent_url_android}#Intent;${fallbackUrl ? `S.browser_fallback_url=${fallbackUrl};` : ""}package=${appDetails.packages.android};scheme=https;end`,
       ios: `${appDetails.packages.ios}://${intent_url_ios}`,
       web: url
     }

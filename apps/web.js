@@ -1,6 +1,6 @@
 const getApp = require("../helpers/getApp.js");
 
-module.exports = (url) => {
+module.exports = (url, { fallbackUrl }) => {
   let appDetails = getApp(url);
   return {
     appName: appDetails.name,

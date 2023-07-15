@@ -1,6 +1,6 @@
 const getApp = require("../helpers/getApp.js");
 
-module.exports = (url) => {
+module.exports = (url, { fallbackUrl }) => {
   let appDetails = getApp(url);
   let { host, pathname, search } = new URL(appDetails.url);
   let params = pathname.split("/").filter(e => !!e);
