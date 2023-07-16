@@ -8,6 +8,10 @@ module.exports = (url) => {
         android: "com.google.android.youtube",
         ios: "vnd.youtube"
       },
+      links: {
+        android: "https://play.google.com/store/apps/details?id=com.google.android.youtube",
+        ios: "https://apps.apple.com/us/app/youtube-watch-listen-stream/id544007664"
+      },
       url: url.replace("m.youtube.com", "youtube.com").replace("youtu.be/", "youtube.com/watch?v=")
     }
   }
@@ -18,6 +22,10 @@ module.exports = (url) => {
       packages: {
         android: "com.instagram.android",
         ios: "vnd.instagram"
+      },
+      links: {
+        android: "https://play.google.com/store/apps/details?id=com.instagram.android",
+        ios: "https://apps.apple.com/in/app/instagram/id389801252"
       },
       url
     }
@@ -30,6 +38,10 @@ module.exports = (url) => {
         android: "com.twitter.android",
         ios: "twitter"
       },
+      links: {
+        android: "https://play.google.com/store/apps/details?id=com.twitter.android",
+        ios: "https://apps.apple.com/us/app/twitter/id333903271"
+      },
       url: url.replace("twttr.com", "twitter.com")
     }
   }
@@ -40,6 +52,10 @@ module.exports = (url) => {
       packages: {
         android: "com.spotify.music",
         ios: "spotify"
+      },
+      links: {
+        android: "https://play.google.com/store/apps/details?id=com.spotify.music",
+        ios: "https://apps.apple.com/us/app/spotify-music-and-podcasts/id324684580"
       },
       url
     }
@@ -52,6 +68,10 @@ module.exports = (url) => {
         android: "com.snapchat.android",
         ios: "snapchat"
       },
+      links: {
+        android: "https://play.google.com/store/apps/details?id=com.snapchat.android",
+        ios: "https://apps.apple.com/us/app/snapchat/id447188370"
+      },
       url
     }
   }
@@ -62,6 +82,10 @@ module.exports = (url) => {
       packages: {
         android: "org.telegram.messenger",
         ios: "tg"
+      },
+      links: {
+        android: "https://play.google.com/store/apps/details?id=org.telegram.messenger",
+        ios: "https://apps.apple.com/us/app/telegram-messenger/id686449807"
       },
       url: url.replace("telegram.me", "t.me").replace("telegram.dog", "t.me")
     }
@@ -74,6 +98,10 @@ module.exports = (url) => {
       packages: {
         android: "com.whatsapp",
         ios: "whatsapp"
+      },
+      links: {
+        android: "https://play.google.com/store/apps/details?id=com.whatsapp",
+        ios: "https://apps.apple.com/us/app/whatsapp-messenger/id310633997"
       },
       url
     }

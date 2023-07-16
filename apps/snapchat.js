@@ -8,7 +8,7 @@ module.exports = (url, { fallbackUrl }) => {
   return {
     appName: appDetails.name,
     intents: {
-      android: `intent://${intent_url_android}#Intent;${fallbackUrl ? `S.browser_fallback_url=${fallbackUrl};` : ""}package=${appDetails.packages.android};scheme=https;end`,
+      android: `intent://${intent_url}#Intent;${fallbackUrl ? `S.browser_fallback_url=${fallbackUrl};` : ""}package=${appDetails.packages.android};scheme=https;end`,
       ios: `${appDetails.packages.ios}:/${pathname}`,
       web: url
     }
