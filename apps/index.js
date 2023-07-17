@@ -5,6 +5,7 @@ const twitter = require("./twitter.js");
 const snapchat = require("./snapchat.js");
 const telegram = require("./telegram.js");
 const whatsapp = require("./whatsapp.js");
+const pinterest = require("./pinterest.js");
 const web = require("./web.js");
 
 module.exports = {
@@ -15,5 +16,6 @@ module.exports = {
   twitter,
   snapchat,
   telegram,
-  whatsapp
+  whatsapp,
+  pinterest
 };

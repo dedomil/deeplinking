@@ -8,8 +8,8 @@ module.exports = (url, { fallbackUrl }) => {
   return {
     appName: appDetails.name,
     intents: {
-      android: `spotify://${query}/${value}`,
-      ios: `spotify://${query}/${value}`,
+      android: `${appDetails.packages.ios}://${query}/${value}`,
+      ios: `${appDetails.packages.ios}://${query}/${value}`,
       web: url
     }
   }

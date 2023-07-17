@@ -106,6 +106,21 @@ module.exports = (url) => {
       url
     }
   }
+  /** pinterest */
+  if (hostname.includes("pinterest.com")) {
+    return {
+      name: "pinterest",
+      packages: {
+        android: "com.pinterest",
+        ios: "pinterest"
+      },
+      links: {
+        android: "https://play.google.com/store/apps/details?id=com.pinterest",
+        ios: "https://apps.apple.com/us/app/pinterest/id429047995"
+      },
+      url
+    }
+  }
   return {
     name: "web",
     packages: {
